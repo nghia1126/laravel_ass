@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductUpdateRequest;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
@@ -12,17 +13,35 @@ class ProductController extends Controller
 
     public function productClient()
     {
-        $products = DB::table('products')->select('*');
-        $products = $products->get();
+
+        $products = DB::table('products')
+        ->join('category', 'products.category_id', '=', 'category.id')
+        ->select('products.*', 'category.name AS cate')
+        ->orderBy('products.id', 'ASC')
+        ->get();
+
+        // $products = DB::table('products')->select('*');
+
+        return view('client.product', compact('products'));
+    }
+    public function productDetail ($id)
+    {
+        $product= Product::find($id);
+        return view('client.product-detail',['product'=> $product]);
     }
 
     public function index()
     {
+        // $categories = Category::all();
+        $productsPaginate = Product::join('category', 'products.category_id', '=', 'category.id')
 
+        ->select('products.*', 'category.name AS cate')
+        ->orderBy('products.id', 'ASC')->Paginate(6);
         //dd(request()->key);
-        $productsPaginate =Product::select('id', 'name', 'price',  'avatar', 'desc')
-            ->paginate(5);
-
+        // $productsPaginate =DB::table('products')->select('products.*', 'category.name')
+        //     ->join('category', 'products.category_id', '=', 'category->id')
+        //     ->paginate(5);
+        // dd($productsPaginate);
         if($key=request()->key ){
             $productsPaginate =Product::select('id', 'name', 'price',  'avatar', 'desc')
             ->where( 'name', 'like', '%'.$key.'%')
@@ -36,27 +55,22 @@ class ProductController extends Controller
 
     public function create()
     {
-       return view('admin.product.createProduct');
+        $categories = Category::all();
+       return view('admin.product.createProduct', compact('categories'));
     }
 
     public function store(ProductUpdateRequest $request)
     {
-// định nghĩa các đk validate
-        // $request->validate([
-        //     'name'=> 'required|min:6|max:50',
-        //     'email'=> 'required|min:6|email',
-        //     'password'=> 'required|min:6|max:50'
-        // ]);
 
-//nếu các đk ở trên thỏa mãn thì chạy xuống
 
        $product = new Product();
        //cách 1
-            $product->name= $request->name;
-            $product->price= $request->price;
-            $product->desc= $request->desc;
+            // $product->name= $request->name;
+            // $product->price= $request->price;
+            // $product->category_id= $request->category_id;
+            // $product->desc= $request->desc;
        //cách 2
-    //    $product->fill($request->all());
+       $product->fill($request->all());
        //kiểm tra file và lưu
        if ($request->hasFile('avatar')) {
         // 2.1 Xử lý tên file
@@ -86,8 +100,10 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
+        $categories = Category::all();
         return view('admin.product.createProduct', [
-            'product'=> $product
+            'product'=> $product,
+            'categories' => $categories,
         ]);
     }
 

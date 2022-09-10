@@ -1,4 +1,8 @@
-@include('layout.header')
+{{-- @include('layout.header') --}}
+@extends('layout.master')
+@section('title', 'Sản phẩm')
+
+@section('content')
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 
@@ -42,13 +46,14 @@
 					<h2>new arrivals</h2>
 				</div><!--/.section-header-->
 				<div class="new-arrivals-content">
-					<div class="row">
+                    <div class="row">
+                        @foreach ($products as $item)
 						<div class="col-md-3 col-sm-4">
 							<div class="single-new-arrival">
-                                @foreach ($products as $item)
                                 <div class="single-new-arrival-bg">
 
-									<img src="assets/images/collection/arrivals1.png" alt="new-arrivals images">
+									<img src="{{asset($item->avatar)}}" alt="new-arrivals images">
+
 									<div class="single-new-arrival-bg-overlay"></div>
 									<div class="sale bg-1">
 										<p>sale</p>
@@ -56,6 +61,7 @@
 									<div class="new-arrival-cart">
 										<p>
 											<span class="lnr lnr-cart"></span>
+
 											<a href="#">add <span>to </span> cart</a>
 										</p>
 										<p class="arrival-review pull-right">
@@ -64,13 +70,14 @@
 										</p>
 									</div>
 								</div>
-								<h4><a href="#">{{$item['name']}} </a></h4>
-								<p class="arrival-product-price">{{$item['price']}} </p>
-                                @endforeach
+								<h4><a href="{{route('productDetail', $item->id)}}">{{$item->name}} </a></h4>
+								<p class="arrival-product-price">{{$item->price}}  </p>
+                                <p>Danh mục: {{$item->cate}}</p>
 
 							</div>
 						</div>
-						<div class="col-md-3 col-sm-4">
+                        @endforeach
+						{{-- <div class="col-md-3 col-sm-4">
 							<div class="single-new-arrival">
 								<div class="single-new-arrival-bg">
 									<img src="assets/images/collection/arrivals2.png" alt="new-arrivals images">
@@ -135,7 +142,7 @@
 								<h4><a href="#">stylish chair</a></h4>
 								<p class="arrival-product-price">$100.00</p>
 							</div>
-						</div>
+						</div> --}}
 						{{-- <div class="col-md-3 col-sm-4">
 							<div class="single-new-arrival">
 								<div class="single-new-arrival-bg">
@@ -342,5 +349,5 @@
 
 		</section><!--/.feature-->
 		<!--feature end -->
-
-@include('layout.footer')
+@endsection
+{{-- @include('layout.footer') --}}

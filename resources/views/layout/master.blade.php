@@ -10,13 +10,13 @@
 
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-        
+
         <!-- title of site -->
-        <title>Furniture</title>
+        <title>@yield('title')</title>
 
         <!-- For favicon png -->
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-       
+
         <!--font-awesome.min.css-->
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
@@ -29,36 +29,36 @@
         <!--owl.carousel.css-->
         <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
 		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-		
+
         <!--bootstrap.min.css-->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
+
 		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
-        
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >
+
         <!--style.css-->
         <link rel="stylesheet" href="assets/css/style.css">
-        
+
         <!--responsive.css-->
         <link rel="stylesheet" href="assets/css/responsive.css">
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		
+
         <!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
     </head>
-	
+
 	<body>
 		<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-		
+
 		@include('layout.header')
-	
+
 		<!--welcome-hero end -->
 
 		<!--populer-products start -->
@@ -129,14 +129,14 @@
         <!--/.populer-products-->
 		<!--populer-products end-->
 		<section class="content">
-    
+
 			<div class="container-fluid">
 			  <div class="row">
 				<div class="col-12">
 				  <!-- Default box -->
-	  
+
 				  @yield('content')
-	  
+
 				  <!-- /.card -->
 				</div>
 			  </div>
@@ -328,7 +328,7 @@
 					</div>
 				</div>
 			</div><!--/.container-->
-		
+
 		</section>
         <!--/.new-arrivals--> --}}
 		<!--new-arrivals end -->
@@ -341,7 +341,7 @@
 						<div class="sofa-collection-txt">
 							<h2>unlimited sofa collection</h2>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 							</p>
 							<div class="sofa-collection-price">
 								<h4>strting from <span>$ 199</span></h4>
@@ -350,14 +350,14 @@
 								view more
 							</button>
 						</div>
-					</div>	
+					</div>
 				</div><!--/.sofa-collection-->
 				<div class="sofa-collection collectionbg2">
 					<div class="container">
 						<div class="sofa-collection-txt">
 							<h2>unlimited dainning table collection</h2>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 							</p>
 							<div class="sofa-collection-price">
 								<h4>strting from <span>$ 299</span></h4>
@@ -474,11 +474,11 @@
 									<h2><a href="#">Why Brands are Looking at Local Language</a></h2>
 									<h3>By <a href="#">Robert Norby</a> / 18th March 2018</h3>
 									<p>
-										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.... 
+										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt....
 									</p>
 								</div>
 							</div>
-							
+
 						</div>
 						<div class="col-sm-4">
 							<div class="single-blog">
@@ -490,7 +490,7 @@
 									<h2><a href="#">Why Brands are Looking at Local Language</a></h2>
 									<h3>By <a href="#">Robert Norby</a> / 18th March 2018</h3>
 									<p>
-										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.... 
+										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt....
 									</p>
 								</div>
 							</div>
@@ -505,7 +505,7 @@
 									<h2><a href="#">Why Brands are Looking at Local Language</a></h2>
 									<h3>By <a href="#">Robert Norby</a> / 18th March 2018</h3>
 									<p>
-										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.... 
+										Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt....
 									</p>
 								</div>
 							</div>
@@ -513,7 +513,7 @@
 					</div>
 				</div>
 			</div><!--/.container-->
-			
+
 		</section><!--/.blog--> --}}
 		<!--blog end -->
 
@@ -548,9 +548,9 @@
 						</div><!--/.item-->
 					</div><!--/.owl-carousel-->
 
-			</div><!--/.container-->   
+			</div><!--/.container-->
 
-		</section><!--/.clients-->	
+		</section><!--/.clients-->
 		<!-- clients end -->
 
 		<!--newsletter strat -->
@@ -639,15 +639,13 @@
 			<div class="container">
 				<div class="hm-footer-copyright text-center">
 					<div class="footer-social">
-						<a href="#"><i class="fa fa-facebook"></i></a>	
+						<a href="#"><i class="fa fa-facebook"></i></a>
 						<a href="#"><i class="fa fa-instagram"></i></a>
 						<a href="#"><i class="fa fa-linkedin"></i></a>
 						<a href="#"><i class="fa fa-pinterest"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>	
+						<a href="#"><i class="fa fa-behance"></i></a>
 					</div>
-					<p>
-						&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
-					</p><!--/p-->
+
 				</div><!--/.text-center-->
 			</div><!--/.container-->
 
@@ -655,22 +653,22 @@
 				<div class="return-to-top">
 					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
 				</div>
-				
+
 			</div><!--/.scroll-Top-->
-			
+
         </footer><!--/.footer-->
 		<!--footer end-->
-		
+
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
 		<script src="assets/js/jquery.js"></script>
-        
+
         <!--modernizr.min.js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
+
 		<!--bootstrap.min.js-->
         <script src="assets/js/bootstrap.min.js"></script>
-		
+
 		<!-- bootsnav js -->
 		<script src="assets/js/bootsnav.js"></script>
 
@@ -679,11 +677,11 @@
 
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		
-        
+
+
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
-        
+
     </body>
-	
+
 </html>

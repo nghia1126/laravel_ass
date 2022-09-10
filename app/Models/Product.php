@@ -11,10 +11,17 @@ class Product extends Model
     protected $table='products';
     protected $fillable = [
         'name',
+        'category_id',
         'price',
         'avatar',
         'desc',
-
-
     ];
+
+    public function category()
+    {
+        return $this->hasOne(Category::class,
+        'id',
+        'category_id')
+        ->withDefault(['name' => '']);
+    }
 }

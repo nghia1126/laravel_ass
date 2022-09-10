@@ -39,7 +39,7 @@ class ProductUpdateRequest extends FormRequest
             'price.required'=> 'Giá bắt buộc nhập',
             'price.max'=> 'Độ dài tối thiểu 9 kí tự',
             'price.min'=> 'Giá tối thiểu 4 kí tự',
-            'desc.required'=> 'Mô tả bắt buộc là số',
+            'desc.required'=> 'Mô tả bắt buộc là kí tự',
             'desc.min'=> 'Độ dài tối thiểu 4 kí tự',
         ];
     }

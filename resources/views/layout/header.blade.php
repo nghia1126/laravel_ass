@@ -25,7 +25,7 @@
 													<h4>great design collection</h4>
 													<h2>cloth covered accent chair</h2>
 													<p>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. 
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
 													</p>
 													<div class="packages-price">
 														<p>
@@ -33,7 +33,7 @@
 															<del>$ 499.00</del>
 														</p>
 													</div>
-													<button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
+													<button class="btn-cart welcome-add-cart" onclick="window.location.href=''">
 														<span class="lnr lnr-plus-circle"></span>
 														add <span>to</span> cart
 													</button>
@@ -68,7 +68,7 @@
 													<h4>great design collection</h4>
 													<h2>mapple wood accent chair</h2>
 													<p>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. 
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
 													</p>
 													<div class="packages-price">
 														<p>
@@ -111,7 +111,7 @@
 													<h4>great design collection</h4>
 													<h2>valvet accent arm chair</h2>
 													<p>
-														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. 
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
 													</p>
 													<div class="packages-price">
 														<p>
@@ -140,7 +140,7 @@
 								</div><!--/.welcome-hero-content-->
 							</div><!-- /.container-->
 						</div><!-- /.single-slide-item-->
-						
+
 					</div><!-- /.item .active-->
 				</div><!-- /.carousel-inner-->
 
@@ -164,7 +164,7 @@
 				        </div>
 				        <!-- End Top Search -->
 
-				        <div class="container">            
+				        <div class="container">
 				            <!-- Start Atribute Navigation -->
 				            <div class="attr-nav">
 				                <ul>
@@ -238,7 +238,7 @@
 				                    <li class=""><a href="{{route('product')}}">sản phẩm</a></li>
 				                    <li class=""><a href="{{route('contact')}}">liên hệ</a></li>
 				                    <li class=""><a href="{{route('login')}}">đăng nhập</a></li>
-				                    
+
 				                </ul><!--/.nav -->
 				            </div><!-- /.navbar-collapse -->
 				        </div><!--/.container-->

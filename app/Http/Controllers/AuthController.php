@@ -24,20 +24,29 @@ class AuthController extends Controller
         $email = $request->email;
         $password = $request->password;
 
+
         // Kiểm tra thông tin đăng nhập của người dùng
         if (Auth::attempt([
             'email' => $email, // trường thông tin email trong DB => giá trị
             'password' => $password // trường thông tin password trong DB => giá trị
+
         ])) {
+            $auth = Auth::user();
+
+                if ($auth->role == 1) {
+                    return redirect()->route('admin.listUser');
+                } else {
+                    return redirect()->route('/');
+                }
 
             return redirect()->route('/');
         } else {
 
-            return redirect()->route('auth.getLogin');
+            return redirect()->route('/');
         }
     }
 
-    public function signup()
+    public function getsignup()
     {
         return view('auth.signup');
     }

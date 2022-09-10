@@ -32,6 +32,16 @@
       value="{{isset($product) ? $product->price : old('price')}}"            >
 
     </div>
+    <div>
+    <label class="form-label" for="form3Example1">Danh Mục</label>
+                    <select name="category_id" class="form-control" id=""
+                    value="{{isset($product) ? $product->category_id : old('category_id')}}"            >
+>
+                        @foreach ($categories as $item)
+                            <option value="{{ $item->id }}"> {{ $item->name }} </option>
+                        @endforeach
+                    </select>
+                </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label"> Ảnh sản phẩm</label>
         <input type="file" name="avatar"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

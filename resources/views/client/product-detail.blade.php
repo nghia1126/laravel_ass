@@ -1,31 +1,74 @@
-@include('layout.header')<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+@extends('layout.master')
+@section('title', ' Chi tiết sản phẩm')
+
+@section('content')
+
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
- 
-<!--font-awesome.min.css-->
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-<!--linear icon css-->
-<link rel="stylesheet" href="assets/css/linearicons.css">
+        <!-- title of site -->
+        <title>Furniture</title>
 
-<!--animate.css-->
-<link rel="stylesheet" href="assets/css/animate.css">
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
 
-<!--owl.carousel.css-->
-<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-<!--bootstrap.min.css-->
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--linear icon css-->
+		<link rel="stylesheet" href="assets/css/linearicons.css">
 
-<!-- bootsnav -->
-<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+		<!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
 
-<!--style.css-->
-<link rel="stylesheet" href="assets/css/style.css">
+        <!--owl.carousel.css-->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
 
-<!--responsive.css-->
-<link rel="stylesheet" href="assets/css/responsive.css">
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >
+
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+        <!-- title of site -->
+        <title>Furniture</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <!--linear icon css-->
+		<link rel="stylesheet" href="assets/css/linearicons.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+
+        <!--owl.carousel.css-->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >
+
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
 
 
 <style>
@@ -160,11 +203,11 @@
             content: '\2605';
         }
         .rate > input:checked ~ label {
-            color: #ffc700;    
+            color: #ffc700;
         }
         .rate:not(:checked) > label:hover,
         .rate:not(:checked) > label:hover ~ label {
-            color: #deb217;  
+            color: #deb217;
         }
         .rate > input:checked + label:hover,
         .rate > input:checked + label:hover ~ label,
@@ -190,7 +233,7 @@
         box-shadow: none;
         }
         .product-count {
-        margin-top: 15px; 
+        margin-top: 15px;
         }
         .product-count .qtyminus,
         .product-count .qtyplus {
@@ -204,10 +247,10 @@
             cursor: pointer;
         }
         .product-count .qtyminus {
-        border-radius: 3px 0 0 3px; 
+        border-radius: 3px 0 0 3px;
         }
         .product-count .qtyplus {
-        border-radius: 0 3px 3px 0; 
+        border-radius: 0 3px 3px 0;
         }
         .product-count .qty {
         width: 60px;
@@ -220,7 +263,7 @@
             padding: 7px 45px;
             display: inline-block;
             margin-top: 20px;
-            border: solid 2px #212529; 
+            border: solid 2px #212529;
             transition: all 0.5s ease-in-out 0s;
         }
         .round-black-btn:hover,
@@ -231,7 +274,7 @@
         }
 
         .product-info-tabs {
-        margin-top: 25px; 
+        margin-top: 25px;
         }
         .product-info-tabs .nav-tabs {
         border-bottom: 2px solid #d8d8d8;
@@ -240,17 +283,17 @@
         margin-bottom: 0;
         }
         .product-info-tabs .nav-tabs .nav-link {
-        border: none; 
+        border: none;
         border-bottom: 2px solid transparent;
         color: #323232;
         }
         .product-info-tabs .nav-tabs .nav-item .nav-link:hover {
-        border: none; 
+        border: none;
         }
-        .product-info-tabs .nav-tabs .nav-item.show .nav-link, 
-        .product-info-tabs .nav-tabs .nav-link.active, 
+        .product-info-tabs .nav-tabs .nav-item.show .nav-link,
+        .product-info-tabs .nav-tabs .nav-link.active,
         .product-info-tabs .nav-tabs .nav-link.active:hover {
-        border: none; 
+        border: none;
         border-bottom: 2px solid #d8d8d8;
         font-weight: bold;
         }
@@ -303,7 +346,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"><div class="pd-wrap">
-    <div class="container">
+    {{-- <div class="container">
           <div class="heading-section">
               <h2>Product Details</h2>
           </div>
@@ -311,55 +354,17 @@
             <div class="col-md-6">
               <div id="slider" class="owl-carousel product-slider">
             <div class="item">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
-            </div>
-            <div class="item">
-                <img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
-            </div>
-            <div class="item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
-            </div>
-            <div class="item">
-                <img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
-            </div>
-            <div class="item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
-            </div>
-            <div class="item">
-                <img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
-            </div>
-            <div class="item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
-            </div>
+                <img src="{{asset($product->avatar)}}" />            </div>
+
           </div>
           <div id="thumb" class="owl-carousel product-thumb">
-            <div class="item">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
-            </div>
-            <div class="item">
-                <img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
-            </div>
-            <div class="item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
-            </div>
-            <div class="item">
-                <img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
-            </div>
-            <div class="item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
-            </div>
-            <div class="item">
-                <img src="https://i.ytimg.com/vi/PJ_zomNMK_s/maxresdefault.jpg" />
-            </div>
-            <div class="item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQI6nUmObt62eDkqNSmIvCN_KkQExtbpJmUbVx_eTh_Y3v3r-Jw" />
-            </div>
+
           </div>
             </div>
             <div class="col-md-6">
               <div class="product-dtl">
                 <div class="product-info">
-                  <div class="product-name">Variable Product</div>
+                  <div class="product-name">{{$product->name}}</div>
                   <div class="reviews-counter">
                 <div class="rate">
                     <input type="radio" id="star5" name="rate" value="5" checked />
@@ -375,9 +380,9 @@
                   </div>
                 <span>3 Reviews</span>
               </div>
-                  <div class="product-price-discount"><span>$39.00</span><span class="line-through">$29.00</span></div>
+                  <div class="product-price-discount"><span>{{$product->price}}</span><span class="line-through">$29.00</span></div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>{{$product->desc}}</p>
                 <div class="row">
                   <div class="col-md-6">
                     <label for="size">Size</label>
@@ -464,95 +469,182 @@
             </div>
         </div>
       </div>
-      
-    </div>
+
+    </div> --}}
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity=" sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-  <script>
-    $(document).ready(function() {
-        var slider = $("#slider");
-        var thumb = $("#thumb");
-        var slidesPerPage = 4; //globaly define number of elements per page
-        var syncedSecondary = true;
-        slider.owlCarousel({
-            items: 1,
-            slideSpeed: 2000,
-            nav: false,
-            autoplay: false, 
-            dots: false,
-            loop: true,
-            responsiveRefreshRate: 200
-        }).on('changed.owl.carousel', syncPosition);
-        thumb
-            .on('initialized.owl.carousel', function() {
-                thumb.find(".owl-item").eq(0).addClass("current");
-            })
-            .owlCarousel({
-                items: slidesPerPage,
-                dots: false,
-                nav: true,
-                item: 4,
-                smartSpeed: 200,
-                slideSpeed: 500,
-                slideBy: slidesPerPage, 
-              navText: ['<svg width="18px" height="18px" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="25px" height="25px" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
-                responsiveRefreshRate: 100
-            }).on('changed.owl.carousel', syncPosition2);
-        function syncPosition(el) {
-            var count = el.item.count - 1;
-            var current = Math.round(el.item.index - (el.item.count / 2) - .5);
-            if (current < 0) {
-                current = count;
-            }
-            if (current > count) {
-                current = 0;
-            }
-            thumb
-                .find(".owl-item")
-                .removeClass("current")
-                .eq(current)
-                .addClass("current");
-            var onscreen = thumb.find('.owl-item.active').length - 1;
-            var start = thumb.find('.owl-item.active').first().index();
-            var end = thumb.find('.owl-item.active').last().index();
-            if (current > end) {
-                thumb.data('owl.carousel').to(current, 100, true);
-            }
-            if (current < start) {
-                thumb.data('owl.carousel').to(current - onscreen, 100, true);
-            }
+
+
+
+
+<html lang="en">
+
+<head>
+  <title>Harvest vase</title>
+  <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+</head>
+<style>
+            body {
+        background-color: #fdf1ec;
         }
-        function syncPosition2(el) {
-            if (syncedSecondary) {
-                var number = el.item.index;
-                slider.data('owl.carousel').to(number, 100, true);
-            }
+
+        .wrapper {
+        height: 420px;
+        width: 654px;
+        margin: 50px auto;
+        border-radius: 7px 7px 7px 7px;
+        /* VIA CSS MATIC https://goo.gl/cIbnS */
+        -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
         }
-        thumb.on("click", ".owl-item", function(e) {
-            e.preventDefault();
-            var number = $(this).index();
-            slider.data('owl.carousel').to(number, 300, true);
-        });
+
+        .product-img {
+        float: left;
+        height: 420px;
+        width: 327px;
+        }
+
+        .product-img img {
+        border-radius: 7px 0 0 7px;
+        }
+
+        .product-info {
+        float: left;
+        height: 420px;
+        width: 327px;
+        border-radius: 0 7px 10px 7px;
+        background-color: #ffffff;
+        }
+
+        .product-text {
+        height: 300px;
+        width: 327px;
+        }
+
+        .product-text h1 {
+        margin: 0 0 0 38px;
+        padding-top: 52px;
+        font-size: 34px;
+        color: #474747;
+        }
+
+        .product-text h1,
+        .product-price-btn p {
+        font-family: 'Bentham', serif;
+        }
+
+        .product-text h2 {
+        margin: 0 0 47px 38px;
+        font-size: 13px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #d2d2d2;
+        letter-spacing: 0.2em;
+        }
+
+        .product-text p {
+        height: 125px;
+        margin: 0 0 0 38px;
+        font-family: 'Playfair Display', serif;
+        color: #8d8d8d;
+        line-height: 1.7em;
+        font-size: 15px;
+        font-weight: lighter;
+        overflow: hidden;
+        }
+
+        .product-price-btn {
+        height: 103px;
+        width: 327px;
+        margin-top: 17px;
+        position: relative;
+        }
+
+        .product-price-btn p {
+        display: inline-block;
+        position: absolute;
+        top: -13px;
+        height: 50px;
+        font-family: 'Trocchi', serif;
+        margin: 0 0 0 38px;
+        font-size: 28px;
+        font-weight: lighter;
+        color: #474747;
+        }
+
+        span {
+        display: inline-block;
+        height: 50px;
+        font-family: 'Suranna', serif;
+        font-size: 34px;
+        }
+
+        .product-price-btn button {
+        float: right;
+        display: inline-block;
+        height: 50px;
+        width: 176px;
+        margin: 0 40px 0 16px;
+        box-sizing: border-box;
+        border: transparent;
+        border-radius: 60px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        background-color: #9cebd5;
+        cursor: pointer;
+        outline: none;
+        }
+
+        .product-price-btn button:hover {
+        background-color: #79b0a1;
+        }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="product-img">
+      <img src="{{asset($product->avatar)}}" style="width: 100%"  >
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1>{{$product->name}}</h1>
+        <h2>{{$product->category_id}}</h2>
+        <p>{{$product->desc}}</p>
+      </div>
+      <div class="product-price-btn">
+        <p><span>{{$product->price}}</span>đ</p>
+        <br>
+        <form action="{{route('cart')}}" method="POST">
+            @csrf
+            <div  class="product-count" style="margin-left: 30px">
+                @if(Auth::check())
+                            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+                            @endif
+                <input type="text" value="{{$product->id}}" name="product_id" hidden>
+                <form action="#" class="display-flex">
+                    <input min="1"
+                    max="100" value="{{ $product['quantity'] }}" type="number"
+                    name="quantity"></td>
+            </div>
 
 
-            $(".qtyminus").on("click",function(){
-                var now = $(".qty").val();
-                if ($.isNumeric(now)){
-                    if (parseInt(now) -1> 0)
-                    { now--;}
-                    $(".qty").val(now);
-                }
-            })            
-            $(".qtyplus").on("click",function(){
-                var now = $(".qty").val();
-                if ($.isNumeric(now)){
-                    $(".qty").val(parseInt(now)+1);
-                }
-            });
-    });
-  </script>
-@include('layout.footer')
+            <button type="submit">buy now</button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
+@endsection

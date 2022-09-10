@@ -24,7 +24,7 @@
       <tr>
         <th>Tên sản phẩm</th>
         <th>Giá sản phẩm</th>
-
+        <th>Danh mục</th>
         <th>Ảnh sản phẩm</th>
         <th>Tình trạng</th>
       </tr>
@@ -34,6 +34,8 @@
         <tr>
             <td> {{$item['name']}} </td>
             <td> {{$item['price']}} </td>
+
+            <td>{{$item->cate}}</td>
             <td><img src="{{asset($item->avatar)}}" alt="" width="100" ></td>
 
             {{-- <td>@if($item->status == 2)

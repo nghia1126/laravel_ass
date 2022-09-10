@@ -7,6 +7,8 @@ use Illuminate\Database\Seeder;
 use App\Models\Product;
 use App\Models\User;
 use App\Models\Sp;
+use App\Models\Category;
+use App\Models\Cart;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -22,8 +24,8 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Product::factory(10)->create();
-        User::factory(10)->create();
-        //Sp::factory(10)->create();
+        // Product::factory(10)->create();
+        // User::factory(10)->create();
+        // Category::factory(10)->create();
     }
 }

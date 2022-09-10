@@ -188,104 +188,92 @@
               </div>
             </div>
           </div>
-          <li class="nav-item">
-            <a href="{{route('logout')}}" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
-              <p>Log-Out</p>
-            </a>
-          </li>
+
           <!-- Sidebar Menu -->
-          {{-- <nav class="mt-2">
+          <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <!-- Add icons to the links using the .nav-icon class
                    with font-awesome or any other icon font library -->
               <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>
-                    Dashboard
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="{{route('home')}}" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Dashboard v1</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../../index2.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Dashboard v2</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../../index3.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Dashboard v3</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('admin.listUser')}}" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
                     User
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{route('users.list')}}" class="nav-link">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>List user</p>
-                        </a>
-                      </li>
-                    <li class="nav-item">
-                      <a href="{{route('add-user')}}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Add user</p>
-                      </a>
-                    </li>
-                  </ul>
+                {{-- <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{route('admin.listUser')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>List user</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{route('admin.createUser')}}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add user</p>
+                    </a>
+                  </li>
+
+                </ul> --}}
               </li>
               <li class="nav-item">
-                <a href="{{route('register')}}" class="nav-link">
+                <a href="{{route('category.listCate')}}" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
-                    Register
+                    Category
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
+                {{-- <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{route('category.listCate')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>List category</p>
+                        </a>
+                      </li>
+                    <li class="nav-item">
+                      <a href="{{route('category.createCate')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Add category</p>
+                      </a>
+                    </li>
+                  </ul> --}}
               </li>
+
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{route('admin.list')}}" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
                     Product
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
-                <ul class="nav nav-treeview">
+                {{-- <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('products')}}" class="nav-link">
+                        <a href="{{route('admin.list')}}" class="nav-link">
                           <i class="far fa-circle nav-icon"></i>
                           <p>List product</p>
                         </a>
                       </li>
                     <li class="nav-item">
-                      <a href="{{route('add-product')}}" class="nav-link">
+                      <a href="{{route('admin.create')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Add product</p>
                       </a>
                     </li>
-                  </ul>
+                  </ul> --}}
               </li>
 
             </ul>
-          </nav> --}}
+            <li class="nav-item">
+                <a href="{{route('logout')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Log-Out</p>
+                </a>
+              </li>
+          </nav>
           <!-- /.sidebar-menu -->
         </div>
         <!-- /.sidebar -->

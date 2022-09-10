@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CategoryController;
 use Laravel\Socialite\Facades\Socialite;
 /*
 |--------------------------------------------------------------------------
@@ -26,13 +28,12 @@ Route::get('/contact', function () {
     return view('client.contact');
 })->name('contact');
 Route::get('/product',[ProductController::class, 'productClient'])->name('product');
-Route::get('/cart', function () {
-    return view('client.cart');
-})->name('cart');
+// Route::get('/cart', function () {
+//     return view('client.cart');
+// })->name('cart');
 
-Route::get('/productDetail', function () {
-    return view('client.product-detail');
-})->name('productDetail');
+
+Route::get('/productDetail/{id}', [ProductController::class , 'productDetail'])->name('productDetail');
 
 
 Route::prefix('/admin')->name('admin.')->group(function () {
@@ -64,6 +65,8 @@ Route::prefix('/admin')->name('admin.')->group(function (){
     Route::post('/store', [ProductController::class, 'store'])->name('store');
     Route::put('/update/{product}', [ProductController::class, 'update'])->name('update');
 
+
+
     // Route::post('/admin/media/{media}', 'Admin\MediaController@completedUpdate')->name('completedUpdate');
 });
 
@@ -72,9 +75,27 @@ Route::prefix('/admin')->name('admin.')->group(function (){
 Route::prefix('/auth')->name('auth.')->group(function () {
     Route::get('/login', [AuthController::class, 'getLogin'])->name('getLogin');
     Route::post('/login', [AuthController::class, 'postLogin'])->name('postLogin');
-    Route::get('/signup', [AuthController::class, 'signup'])->name('signup');
+    Route::get('/signup', [AuthController::class, 'getsignup'])->name('getsignup');
     Route::post('/signup', [AuthController::class, 'postSignup'])->name('postSignup');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 });
+
+Route::prefix('/category')->name('category.')->group(function () {
+    Route::get('/listCate', [CategoryController::class, 'index'])->name('listCate');
+    Route::delete('/deleteCate/{cate}', [CategoryController::class, 'deleteCate'] )->name('deleteCate');
+    Route::get('/createCate', [CategoryController::class, 'createCate'])->name('createCate');
+    Route::post('/storeCate', [CategoryController::class, 'storeCate'])->name('storeCate');
+    Route::get('/editCate/{cate}', [CategoryController::class, 'editCate'])->name('editCate');
+    Route::put('/updateCate/{cate}', [CategoryController::class, 'updateCate'])->name('updateCate');
+//middleware('checkadmin')->
+
+});
+
+//Cart
+
+Route::post('cart',[CartController::class, 'store'])->name('cart');
+Route::get('/listCart', [CartController::class, 'index'])->name('listCart');
+Route::get('/add-cart/{id}', [CartController::class, 'addCart'])->name('add-cart');
+Route::get('/delete-cart/{id}', [CartController::class, 'destroy'])->name('destroy');
